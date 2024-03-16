@@ -1,0 +1,27 @@
+var searchData=
+[
+  ['debug_5fprint_86',['debug_print',['../structads1118__handle__s.html#a769d5b3a6c14790a0e126e8fe70b384b',1,'ads1118_handle_s']]],
+  ['delay_5fms_87',['delay_ms',['../structads1118__handle__s.html#a406c9433252b7366de417b7a60915c81',1,'ads1118_handle_s']]],
+  ['driver_5fads1118_2ec_88',['driver_ads1118.c',['../driver__ads1118_8c.html',1,'']]],
+  ['driver_5fads1118_2eh_89',['driver_ads1118.h',['../driver__ads1118_8h.html',1,'']]],
+  ['driver_5fads1118_5fbasic_2ec_90',['driver_ads1118_basic.c',['../driver__ads1118__basic_8c.html',1,'']]],
+  ['driver_5fads1118_5fbasic_2eh_91',['driver_ads1118_basic.h',['../driver__ads1118__basic_8h.html',1,'']]],
+  ['driver_5fads1118_5finterface_2eh_92',['driver_ads1118_interface.h',['../driver__ads1118__interface_8h.html',1,'']]],
+  ['driver_5fads1118_5finterface_5ftemplate_2ec_93',['driver_ads1118_interface_template.c',['../driver__ads1118__interface__template_8c.html',1,'']]],
+  ['driver_5fads1118_5flink_5fdebug_5fprint_94',['DRIVER_ADS1118_LINK_DEBUG_PRINT',['../group__ads1118__link__driver.html#gaecf749cb7e7d8a129fa1256579677459',1,'driver_ads1118.h']]],
+  ['driver_5fads1118_5flink_5fdelay_5fms_95',['DRIVER_ADS1118_LINK_DELAY_MS',['../group__ads1118__link__driver.html#gaa30464196d9f326f4b643919781121ce',1,'driver_ads1118.h']]],
+  ['driver_5fads1118_5flink_5finit_96',['DRIVER_ADS1118_LINK_INIT',['../group__ads1118__link__driver.html#gacb394980f3f9754ca945049187c4ecbd',1,'driver_ads1118.h']]],
+  ['driver_5fads1118_5flink_5fspi_5fdeinit_97',['DRIVER_ADS1118_LINK_SPI_DEINIT',['../group__ads1118__link__driver.html#ga67761a9d83991ac0300082d47b64e163',1,'driver_ads1118.h']]],
+  ['driver_5fads1118_5flink_5fspi_5finit_98',['DRIVER_ADS1118_LINK_SPI_INIT',['../group__ads1118__link__driver.html#ga73414315e8e80c055eebe3f0893b32df',1,'driver_ads1118.h']]],
+  ['driver_5fads1118_5flink_5fspi_5ftransmit_99',['DRIVER_ADS1118_LINK_SPI_TRANSMIT',['../group__ads1118__link__driver.html#ga9ea452e63bb6493a523b560f7c6d8d34',1,'driver_ads1118.h']]],
+  ['driver_5fads1118_5fmutichannel_5ftest_2ec_100',['driver_ads1118_mutichannel_test.c',['../driver__ads1118__mutichannel__test_8c.html',1,'']]],
+  ['driver_5fads1118_5fmutichannel_5ftest_2eh_101',['driver_ads1118_mutichannel_test.h',['../driver__ads1118__mutichannel__test_8h.html',1,'']]],
+  ['driver_5fads1118_5fread_5ftest_2ec_102',['driver_ads1118_read_test.c',['../driver__ads1118__read__test_8c.html',1,'']]],
+  ['driver_5fads1118_5fread_5ftest_2eh_103',['driver_ads1118_read_test.h',['../driver__ads1118__read__test_8h.html',1,'']]],
+  ['driver_5fads1118_5fregister_5ftest_2ec_104',['driver_ads1118_register_test.c',['../driver__ads1118__register__test_8c.html',1,'']]],
+  ['driver_5fads1118_5fregister_5ftest_2eh_105',['driver_ads1118_register_test.h',['../driver__ads1118__register__test_8h.html',1,'']]],
+  ['driver_5fads1118_5fshot_2ec_106',['driver_ads1118_shot.c',['../driver__ads1118__shot_8c.html',1,'']]],
+  ['driver_5fads1118_5fshot_2eh_107',['driver_ads1118_shot.h',['../driver__ads1118__shot_8h.html',1,'']]],
+  ['driver_5fversion_108',['driver_version',['../structads1118__info__s.html#a41b0bd442708b70d252c50b92c75265a',1,'ads1118_info_s']]],
+  ['driver_5fversion_109',['DRIVER_VERSION',['../driver__ads1118_8c.html#ae578001fe043b4cca7a0edd801cfe9c4',1,'driver_ads1118.c']]]
+];

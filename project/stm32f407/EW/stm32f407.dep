@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+    <fileVersion>5</fileVersion>
+    <fileChecksum>2710143745</fileChecksum>
+    <configuration>
+        <name>Release</name>
+        <outputs>
+            <file>$PROJ_DIR$\..\interface\src\delay.c</file>
+            <file>$PROJ_DIR$\..\interface\src\uart.c</file>
+            <file>$PROJ_DIR$\..\usr\src\stm32f4xx_hal_msp.c</file>
+            <file>$PROJ_DIR$\..\usr\src\shell.c</file>
+            <file>$PROJ_DIR$\..\interface\src\clock.c</file>
+            <file>$PROJ_DIR$\..\usr\src\stm32f4xx_it.c</file>
+            <file>$PROJ_DIR$\..\usr\src\system_stm32f4xx.c</file>
+            <file>$PROJ_DIR$\..\usr\src\main.c</file>
+            <file>$PROJ_DIR$\..\usr\src\getopt.c</file>
+            <file>$PROJ_DIR$\..\driver\src\stm32f407_driver_ads1118_interface.c</file>
+            <file>$PROJ_DIR$\..\..\..\example\driver_ads1118_basic.c</file>
+            <file>$PROJ_DIR$\..\..\..\test\driver_ads1118_mutichannel_test.c</file>
+            <file>$PROJ_DIR$\..\..\..\src\driver_ads1118.c</file>
+            <file>$PROJ_DIR$\..\..\..\test\driver_ads1118_read_test.c</file>
+            <file>$PROJ_DIR$\..\..\..\example\driver_ads1118_shot.c</file>
+            <file>$PROJ_DIR$\..\..\..\test\driver_ads1118_register_test.c</file>
+            <file>$PROJ_DIR$\..\interface\src\spi.c</file>
+        </outputs>
+        <forcedrebuild>
+            <name>[REBUILD_ALL]</name>
+        </forcedrebuild>
+    </configuration>
+</project>
