@@ -8,7 +8,7 @@
 
 [![MISRA](https://img.shields.io/badge/misra-compliant-brightgreen.svg)](/misra/README.md) [![API](https://img.shields.io/badge/api-reference-blue.svg)](https://www.libdriver.com/docs/ads1118/index.html) [![License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](/LICENSE)
 
-ADS1118 是一款精密、低功耗、16 位模数转换器 (ADC)，提供 测量 采用超小型无引线 X2QFN-10 封装 或 VSSOP-10 封装的传感器最常见信号所需的所有功 能。ADS1118 集成了可编程增益放大器 (PGA)、电压 基准、振荡器和高精度温度传感器。这些 功能以及 2V 至 5.5V 的宽电源电压范围，使得 ADS1118 非常适合 功率受限和空间受限的传感器测量 应用。 ADS1118 数据转换速率最高可达每秒 860 次采样 (SPS)。PGA 的输入范围为 ±256mV 至 ±6.144V，能 够以高分辨率测量大信号和小信号。该器件通过输入多 路复用器 (MUX) 测量双路差分输入或四路单端输入。 高精度温度传感器用于系统级温度监控或对热电偶进行 冷结点补偿。
+ADS1118是一款精密的低功耗16 位模数转换器 (ADC)，它采用超小型无引线 X2QFN-10封装或VSSOP-10封装。ADS1118集成了可编程增益放大器 (PGA)、电压基准、振荡器和高精度温度传感器。这些功能以及 2V至 5.5V 的宽电源电压范围，这使得 ADS1118 非常适合功率受限和空间受限的传感器测量应用。ADS1118数据转换速率最高可达每秒860次采样 (SPS)。PGA的输入范围为±256mV至±6.144V，能够以高分辨率测量大信号和小信号。该器件通过输入多路复用器 (MUX) 测量双路差分输入或四路单端输入。 高精度温度传感器用于系统级温度监控或对热电偶进行冷结点补偿。
 
 LibDriver ADS1118是LibDriver推出的ADS1118的全功能驱动，该驱动提供连续模式模数转换、单次模式模数转换，多通道采样切换，内部温度读取等功能并且它符合MISRA标准。
 
