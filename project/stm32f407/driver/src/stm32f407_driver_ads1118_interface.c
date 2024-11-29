@@ -66,9 +66,9 @@ uint8_t ads1118_interface_spi_deinit(void)
 
 /**
  * @brief      interface spi bus transmit
- * @param[in]  *tx points to a tx buffer
- * @param[out] *rx points to a rx buffer
- * @param[in]  len is the length of the data buffer
+ * @param[in]  *tx pointer to a tx buffer
+ * @param[out] *rx pointer to a rx buffer
+ * @param[in]  len length of the data buffer
  * @return     status code
  *             - 0 success
  *             - 1 transmit failed
@@ -81,7 +81,7 @@ uint8_t ads1118_interface_spi_transmit(uint8_t *tx, uint8_t *rx, uint16_t len)
 
 /**
  * @brief     interface delay ms
- * @param[in] ms
+ * @param[in] ms time
  * @note      none
  */
 void ads1118_interface_delay_ms(uint32_t ms)
@@ -91,7 +91,7 @@ void ads1118_interface_delay_ms(uint32_t ms)
 
 /**
  * @brief     interface print format data
- * @param[in] fmt is the format data
+ * @param[in] fmt format data
  * @note      none
  */
 void ads1118_interface_debug_print(const char *const fmt, ...)
