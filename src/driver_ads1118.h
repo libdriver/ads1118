@@ -159,48 +159,48 @@ typedef struct ads1118_info_s
 
 /**
  * @brief     initialize ads1118_handle_t structure
- * @param[in] HANDLE points to an ads1118 handle structure
- * @param[in] STRUCTURE is ads1118_handle_t
+ * @param[in] HANDLE pointer to an ads1118 handle structure
+ * @param[in] STRUCTURE ads1118_handle_t
  * @note      none
  */
 #define DRIVER_ADS1118_LINK_INIT(HANDLE, STRUCTURE)             memset(HANDLE, 0, sizeof(STRUCTURE))
 
 /**
  * @brief     link spi_init function
- * @param[in] HANDLE points to an ads1118 handle structure
- * @param[in] FUC points to an spi_init function address
+ * @param[in] HANDLE pointer to an ads1118 handle structure
+ * @param[in] FUC pointer to an spi_init function address
  * @note      none
  */
 #define DRIVER_ADS1118_LINK_SPI_INIT(HANDLE, FUC)               (HANDLE)->spi_init = FUC
 
 /**
  * @brief     link spi_deinit function
- * @param[in] HANDLE points to an ads1118 handle structure
- * @param[in] FUC points to an spi_deinit function address
+ * @param[in] HANDLE pointer to an ads1118 handle structure
+ * @param[in] FUC pointer to an spi_deinit function address
  * @note      none
  */
 #define DRIVER_ADS1118_LINK_SPI_DEINIT(HANDLE, FUC)             (HANDLE)->spi_deinit = FUC
 
 /**
  * @brief     link spi_transmit function
- * @param[in] HANDLE points to an ads1118 handle structure
- * @param[in] FUC points to an spi_transmit function address
+ * @param[in] HANDLE pointer to an ads1118 handle structure
+ * @param[in] FUC pointer to an spi_transmit function address
  * @note      none
  */
 #define DRIVER_ADS1118_LINK_SPI_TRANSMIT(HANDLE, FUC)           (HANDLE)->spi_transmit = FUC
 
 /**
  * @brief     link delay_ms function
- * @param[in] HANDLE points to an ads1118 handle structure
- * @param[in] FUC points to a delay_ms function address
+ * @param[in] HANDLE pointer to an ads1118 handle structure
+ * @param[in] FUC pointer to a delay_ms function address
  * @note      none
  */
 #define DRIVER_ADS1118_LINK_DELAY_MS(HANDLE, FUC)               (HANDLE)->delay_ms = FUC
 
 /**
  * @brief     link debug_print function
- * @param[in] HANDLE points to an ads1118 handle structure
- * @param[in] FUC points to a debug_print function address
+ * @param[in] HANDLE pointer to an ads1118 handle structure
+ * @param[in] FUC pointer to a debug_print function address
  * @note      none
  */
 #define DRIVER_ADS1118_LINK_DEBUG_PRINT(HANDLE, FUC)            (HANDLE)->debug_print = FUC
@@ -218,7 +218,7 @@ typedef struct ads1118_info_s
 
 /**
  * @brief      get chip's information
- * @param[out] *info points to an ads1118 info structure
+ * @param[out] *info pointer to an ads1118 info structure
  * @return     status code
  *             - 0 success
  *             - 2 handle is NULL
@@ -228,7 +228,7 @@ uint8_t ads1118_info(ads1118_info_t *info);
 
 /**
  * @brief     initialize the chip
- * @param[in] *handle points to an ads1118 handle structure
+ * @param[in] *handle pointer to an ads1118 handle structure
  * @return    status code
  *            - 0 success
  *            - 1 spi initialization failed
@@ -240,7 +240,7 @@ uint8_t ads1118_init(ads1118_handle_t *handle);
 
 /**
  * @brief     close the chip
- * @param[in] *handle points to an ads1118 handle structure
+ * @param[in] *handle pointer to an ads1118 handle structure
  * @return    status code
  *            - 0 success
  *            - 1 spi deinit failed
@@ -253,9 +253,9 @@ uint8_t ads1118_deinit(ads1118_handle_t *handle);
 
 /**
  * @brief      read data from the chip once
- * @param[in]  *handle points to an ads1118 handle structure
- * @param[out] *raw points to a raw adc buffer
- * @param[out] *v points to a converted adc buffer
+ * @param[in]  *handle pointer to an ads1118 handle structure
+ * @param[out] *raw pointer to a raw adc buffer
+ * @param[out] *v pointer to a converted adc buffer
  * @return     status code
  *             - 0 success
  *             - 1 single read failed
@@ -267,9 +267,9 @@ uint8_t ads1118_single_read(ads1118_handle_t *handle, int16_t *raw, float *v);
 
 /**
  * @brief      read data from the chip continuously
- * @param[in]  *handle points to an ads1118 handle structure
- * @param[out] *raw points to a raw adc buffer
- * @param[out] *v points to a converted adc buffer
+ * @param[in]  *handle pointer to an ads1118 handle structure
+ * @param[out] *raw pointer to a raw adc buffer
+ * @param[out] *v pointer to a converted adc buffer
  * @return     status code
  *             - 0 success
  *             - 1 continuous read failed
@@ -282,7 +282,7 @@ uint8_t ads1118_continuous_read(ads1118_handle_t *handle, int16_t *raw, float *v
 
 /**
  * @brief     start the chip reading
- * @param[in] *handle points to an ads1118 handle structure
+ * @param[in] *handle pointer to an ads1118 handle structure
  * @return    status code
  *            - 0 success
  *            - 1 start continuous read failed
@@ -294,7 +294,7 @@ uint8_t ads1118_start_continuous_read(ads1118_handle_t *handle);
 
 /**
  * @brief     stop the chip reading
- * @param[in] *handle points to an ads1118 handle structure
+ * @param[in] *handle pointer to an ads1118 handle structure
  * @return    status code
  *            - 0 success
  *            - 1 stop continuous read failed
@@ -306,9 +306,9 @@ uint8_t ads1118_stop_continuous_read(ads1118_handle_t *handle);
 
 /**
  * @brief      temperature convert
- * @param[in]  *handle points to an ads1118 handle structure
- * @param[in]  raw is the adc raw data
- * @param[out] *deg points to a deg buffer
+ * @param[in]  *handle pointer to an ads1118 handle structure
+ * @param[in]  raw adc raw data
+ * @param[out] *deg pointer to a deg buffer
  * @return     status code
  *             - 0 success
  *             - 2 handle is NULL
@@ -319,8 +319,8 @@ uint8_t ads1118_temperature_convert(ads1118_handle_t *handle, int16_t raw, float
 
 /**
  * @brief     set the adc channel
- * @param[in] *handle points to an ads1118 handle structure
- * @param[in] channel is the adc channel
+ * @param[in] *handle pointer to an ads1118 handle structure
+ * @param[in] channel adc channel
  * @return    status code
  *            - 0 success
  *            - 1 set channel failed
@@ -332,8 +332,8 @@ uint8_t ads1118_set_channel(ads1118_handle_t *handle, ads1118_channel_t channel)
 
 /**
  * @brief      get the adc channel
- * @param[in]  *handle points to an ads1118 handle structure
- * @param[out] *channel points to a channel buffer
+ * @param[in]  *handle pointer to an ads1118 handle structure
+ * @param[out] *channel pointer to a channel buffer
  * @return     status code
  *             - 0 success
  *             - 1 get channel failed
@@ -345,8 +345,8 @@ uint8_t ads1118_get_channel(ads1118_handle_t *handle, ads1118_channel_t *channel
 
 /**
  * @brief     set the adc range
- * @param[in] *handle points to an ads1118 handle structure
- * @param[in] range is the adc max voltage range
+ * @param[in] *handle pointer to an ads1118 handle structure
+ * @param[in] range adc max voltage range
  * @return    status code
  *            - 0 success
  *            - 1 set range failed
@@ -358,8 +358,8 @@ uint8_t ads1118_set_range(ads1118_handle_t *handle, ads1118_range_t range);
 
 /**
  * @brief      get the adc range
- * @param[in]  *handle points to an ads1118 handle structure
- * @param[out] *range points to a voltage range buffer
+ * @param[in]  *handle pointer to an ads1118 handle structure
+ * @param[out] *range pointer to a voltage range buffer
  * @return     status code
  *             - 0 success
  *             - 1 get range failed
@@ -371,8 +371,8 @@ uint8_t ads1118_get_range(ads1118_handle_t *handle, ads1118_range_t *range);
 
 /**
  * @brief     set the sample rate
- * @param[in] *handle points to an ads1118 handle structure
- * @param[in] rate is the adc sample rate
+ * @param[in] *handle pointer to an ads1118 handle structure
+ * @param[in] rate adc sample rate
  * @return    status code
  *            - 0 success
  *            - 1 set rate failed
@@ -384,8 +384,8 @@ uint8_t ads1118_set_rate(ads1118_handle_t *handle, ads1118_rate_t rate);
 
 /**
  * @brief      get the sample rate
- * @param[in]  *handle points to an ads1118 handle structure
- * @param[out] *rate points to an adc sample rate buffer
+ * @param[in]  *handle pointer to an ads1118 handle structure
+ * @param[out] *rate pointer to an adc sample rate buffer
  * @return     status code
  *             - 0 success
  *             - 1 get rate failed
@@ -397,8 +397,8 @@ uint8_t ads1118_get_rate(ads1118_handle_t *handle, ads1118_rate_t *rate);
 
 /**
  * @brief     set the chip mode
- * @param[in] *handle points to an ads1118 handle structure
- * @param[in] mode is the chip mode
+ * @param[in] *handle pointer to an ads1118 handle structure
+ * @param[in] mode chip mode
  * @return    status code
  *            - 0 success
  *            - 1 set mode failed
@@ -410,8 +410,8 @@ uint8_t ads1118_set_mode(ads1118_handle_t *handle, ads1118_mode_t mode);
 
 /**
  * @brief      get the chip mode
- * @param[in]  *handle points to an ads1118 handle structure
- * @param[out] *mode points to a mode buffer
+ * @param[in]  *handle pointer to an ads1118 handle structure
+ * @param[out] *mode pointer to a mode buffer
  * @return     status code
  *             - 0 success
  *             - 1 get mode failed
@@ -423,8 +423,8 @@ uint8_t ads1118_get_mode(ads1118_handle_t *handle, ads1118_mode_t *mode);
 
 /**
  * @brief     enable or disable dout pull up
- * @param[in] *handle points to an ads1118 handle structure
- * @param[in] enable is a bool value
+ * @param[in] *handle pointer to an ads1118 handle structure
+ * @param[in] enable bool value
  * @return    status code
  *            - 0 success
  *            - 1 set dout pull up failed
@@ -436,8 +436,8 @@ uint8_t ads1118_set_dout_pull_up(ads1118_handle_t *handle, ads1118_bool_t enable
 
 /**
  * @brief      get dout pull up status
- * @param[in]  *handle points to an ads1118 handle structure
- * @param[out] *enable points to a bool value buffer
+ * @param[in]  *handle pointer to an ads1118 handle structure
+ * @param[out] *enable pointer to a bool value buffer
  * @return     status code
  *             - 0 success
  *             - 1 get dout pull up failed
@@ -460,10 +460,10 @@ uint8_t ads1118_get_dout_pull_up(ads1118_handle_t *handle, ads1118_bool_t *enabl
 
 /**
  * @brief      chip transmit
- * @param[in]  *handle points to an ads1118 handle structure
- * @param[in]  *tx points to a tx buffer
- * @param[out] *rx points to a rx buffer
- * @param[in]  len is the tx and rx buffer
+ * @param[in]  *handle pointer to an ads1118 handle structure
+ * @param[in]  *tx pointer to a tx buffer
+ * @param[out] *rx pointer to a rx buffer
+ * @param[in]  len length of tx and rx buffer
  * @return     status code
  *             - 0 success
  *             - 1 transmit failed

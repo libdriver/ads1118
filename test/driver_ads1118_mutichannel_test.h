@@ -50,8 +50,8 @@ extern "C"{
 
 /**
  * @brief     multichannel test
- * @param[in] channel is the adc channel
- * @param[in] times is the test times
+ * @param[in] channel adc channel
+ * @param[in] times test times
  * @return    status code
  *            - 0 success
  *            - 1 test failed

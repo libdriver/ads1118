@@ -57,8 +57,8 @@ extern "C"{
 
 /**
  * @brief     shot example init
- * @param[in] mode is the adc mode
- * @param[in] channel is the adc channel
+ * @param[in] mode adc mode
+ * @param[in] channel adc channel
  * @return    status code
  *            - 0 success
  *            - 1 init failed
@@ -68,7 +68,7 @@ uint8_t ads1118_shot_init(ads1118_mode_t mode, ads1118_channel_t channel);
 
 /**
  * @brief      shot example read
- * @param[out] *s points to a converted adc buffer
+ * @param[out] *s pointer to a converted adc buffer
  * @return     status code
  *             - 0 success
  *             - 1 read failed
@@ -78,7 +78,7 @@ uint8_t ads1118_shot_read(float *s);
 
 /**
  * @brief      shot example read
- * @param[out] *deg points to a converted adc buffer
+ * @param[out] *deg pointer to a converted adc buffer
  * @return     status code
  *             - 0 success
  *             - 1 read failed
