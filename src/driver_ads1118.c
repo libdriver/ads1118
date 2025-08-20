@@ -674,8 +674,8 @@ uint8_t ads1118_single_read(ads1118_handle_t *handle, int16_t *raw, float *v)
 {
     uint8_t res;
     uint8_t range;
+    uint8_t rate;
     uint16_t conf;
-    uint32_t timeout = 500;
     
     if (handle == NULL)                                                   /* check handle */
     {
@@ -704,27 +704,63 @@ uint8_t ads1118_single_read(ads1118_handle_t *handle, int16_t *raw, float *v)
         
         return 1;                                                         /* return error */
     }
-    while (timeout != 0)                                                  /* check timeout */
+    rate = (conf >> 5) & 0x7;                                             /* set rate */
+    switch (rate)                                                         /* choose the rate */
     {
-        handle->delay_ms(8);                                              /* wait 8 ms */
-        res = a_ads1118_spi_read(handle, (uint16_t *)&conf);              /* read config */
-        if (res != 0)                                                     /* check error */
+        case 0 :                                                          /* 8sps */
         {
-            handle->debug_print("ads1118: read config failed.\n");        /* read config failed */
+            handle->delay_ms(138);                                        /* > ((1000 / 8) *(1 + 10%)) */
             
-            return 1;                                                     /* return error */
-        }
-        if ((conf & (1 << 15)) == (1 << 15))                              /* check finished */
-        {
             break;                                                        /* break */
         }
-        timeout--;                                                        /* timeout-- */
-    }
-    if (timeout == 0)                                                     /* check timeout */
-    {
-        handle->debug_print("ads1118: read timeout.\n");                  /* timeout */
-        
-        return 1;                                                         /* return error */
+        case 1 :                                                          /* 16sps */
+        {
+            handle->delay_ms(69);                                         /* > ((1000 / 16) *(1 + 10%)) */
+            
+            break;                                                        /* break */
+        }
+        case 2 :                                                          /* 32sps */
+        {
+            handle->delay_ms(35);                                         /* > ((1000 / 32) *(1 + 10%)) */
+            
+            break;                                                        /* break */
+        }
+        case 3 :                                                          /* 64sps */
+        {
+            handle->delay_ms(18);                                         /* > ((1000 / 64) *(1 + 10%)) */
+            
+            break;                                                        /* break */
+        }
+        case 4 :                                                          /* 128sps */
+        {
+            handle->delay_ms(9);                                          /* > ((1000 / 128) *(1 + 10%)) */
+            
+            break;                                                        /* break */
+        }
+        case 5 :                                                          /* 250sps */
+        {
+            handle->delay_ms(5);                                          /* > ((1000 / 250) *(1 + 10%)) */
+            
+            break;                                                        /* break */
+        }
+        case 6 :                                                          /* 475sps */
+        {
+            handle->delay_ms(3);                                          /* > ((1000 / 475) *(1 + 10%)) */
+            
+            break;                                                        /* break */
+        }
+        case 7 :                                                          /* 860sps */
+        {
+            handle->delay_ms(2);                                          /* > ((1000 / 860) *(1 + 10%)) */
+            
+            break;                                                        /* break */
+        }
+        default :
+        {
+            handle->delay_ms(200);                                        /* 200ms */
+            
+            break;                                                        /* break */
+        }
     }
     res = a_ads1118_spi_read_data(handle, raw);                           /* read data */
     if (res != 0)                                                         /* check the result */
