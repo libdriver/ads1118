@@ -10,7 +10,7 @@
 
 The ADS1118 is a precision, low power, 16-bit analog-to-digital converter (ADC) that provides all features necessary to measure the most common sensor signals in an ultra-small, leadless X2QFN-10 package or a VSSOP-10 package. The ADS1118 integrates a programmable gain amplifier (PGA), voltage reference, oscillator and high-accuracy temperature sensor. These features, along with a wide power supply range from 2 V to 5.5 V, make the ADS1118 ideally suited for power- and spaceconstrained, sensor-measurement applications. The ADS1118 can perform conversions at data rates up to 860 samples per second (SPS). The PGA offers input ranges from ±256 mV to ±6.144 V, allowing both large and small signals to be measured with high resolution. An input multiplexer (MUX) allows to measure two differential or four single-ended inputs. The high-accuracy temperature sensor can be used for system-level temperature monitoring or coldjunction compensation for thermocouples.
 
-LibDriver ADS1118 is a full-featured driver of ADS1118 launched by LibDriver. LibDriver ADS1118 provides continuous mode ADC conversion, single mode ADC conversion, multi-channel sampling switching, temperature reading and other functions. LibDriver is MISRA compliant.
+LibDriver ADS1118 is a full-featured driver for ADS1118, launched by LibDriver. It provides continuous reading, single reading, multi-channel sampling switching, temperature reading and additional features. LibDriver is MISRA compliant.
 
 ### Table of Contents
 
