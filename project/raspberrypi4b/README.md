@@ -110,7 +110,7 @@ find_package(ads1118 REQUIRED)
     ads1118 (-t muti | --test=muti) [--times=<num>] [--channel=<AIN0_AIN1 | AIN0_AIN3 | AIN1_AIN3 | AIN2_AIN3 | AIN0_GND | AIN1_GND | AIN2_GND | AIN3_GND>]        
     ```
 
-8. Run ads1118 read function, num means read times.
+7. Run ads1118 read function, num means read times.
 
     ```shell
     ads1118 (-e read | --example=read) [--times=<num>] [--channel=<AIN0_AIN1 | AIN0_AIN3 | AIN1_AIN3 | AIN2_AIN3 | AIN0_GND | AIN1_GND | AIN2_GND | AIN3_GND>]      
