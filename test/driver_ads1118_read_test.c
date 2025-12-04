@@ -49,7 +49,7 @@ static ads1118_handle_t gs_handle;        /**< ads1118 handle */
 uint8_t ads1118_read_test(uint32_t times)
 {
     uint8_t res;
-    uint8_t i;
+    uint32_t i;
     ads1118_info_t info;
     
     /* link interface function */
